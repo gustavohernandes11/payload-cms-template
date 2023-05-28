@@ -13,6 +13,10 @@ export type Layout = CallToActionType | ContentType | ImageType;
 export type Type = {
   title: string;
   slug: string;
+  labels: {
+    singular: string;
+    plural: string;
+  };
   image?: MediaType;
   layout: Layout[];
   meta: {
@@ -22,10 +26,10 @@ export type Type = {
   };
 };
 
-export const Page: CollectionConfig = {
+export const Property: CollectionConfig = {
   slug: "pages",
   labels: {
-    singular: "Página",
+    singular: "Imóvel",
     plural: "Páginas",
   },
   admin: {
@@ -90,4 +94,4 @@ export const Page: CollectionConfig = {
   ],
 };
 
-export default Page;
+export default Property;
